@@ -12,7 +12,7 @@ export default function MainHeaderBackground() {
             />
             <stop
               offset="100%"
-              style={{ stopColor: "#ff6c1a", stopOpacity: "1" }}
+              style={{ stopColor: "#8f3a09", stopOpacity: "1" }}
             />
           </linearGradient>
         </defs>
