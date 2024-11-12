@@ -9,7 +9,7 @@ export default function ImageSlideshow() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) =>
-        prevIndex < slideshowImages.length - 1 ? prevIndex + 1 : 0,
+        prevIndex < slideshowImages.length - 1 ? prevIndex + 1 : 0
       );
     }, 2000);
 
