@@ -1,5 +1,6 @@
 import classes from "./page.module.css";
 import Link from "next/link";
+import MealsGrid from "@/components/SSR-ServerSideRendering/meals/meal-grid";
 
 export default function MealsPage() {
   return (
@@ -15,7 +16,9 @@ export default function MealsPage() {
           <Link href="/meals/share">Share your favorite recipe</Link>
         </p>
       </header>
-      <main className={classes.main}></main>
+      <main className={classes.main}>
+        <MealsGrid meals={[]} />
+      </main>
     </>
   );
 }

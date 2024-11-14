@@ -26,7 +26,7 @@ export default function MealItem({
           <Image
             src={image || "/path/to/default-image.jpg"} //add default path later
             alt={title || "Meal image"}
-            fill
+            fill // fill means the image will stretch to fill the container the image will occupy the full size of the parent container.
           />
         </div>
         <div className={classes.headerText}>
