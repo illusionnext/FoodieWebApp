@@ -11,9 +11,9 @@ export default function CommunityPage() {
         </h1>
         <p>Join our community and share your favorite recipes!</p>
       </header>
+
       <main className={classes.main}>
         <h2>Community Perks</h2>
-
         <ul className={classes.perks}>
           {perks.map((perk, index) => (
             <li key={index}>

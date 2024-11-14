@@ -4,6 +4,8 @@ export default async function MealsSlug({
   params: { slug: string };
 }) {
   const { slug } = params;
+  console.log({ slug });
+  // console.log(params);
 
   return (
     <section>
