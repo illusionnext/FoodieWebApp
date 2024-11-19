@@ -3,7 +3,7 @@ export default async function MealsSlug({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = params;
+  const { slug } = await params; //`params` should be awaited before using its properties
   console.log({ slug });
   // console.log(params);
 

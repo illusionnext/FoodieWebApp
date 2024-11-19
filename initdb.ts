@@ -199,7 +199,7 @@ db.prepare(
      creator TEXT NOT NULL,
      creator_email TEXT NOT NULL
   )
-`
+`,
 ).run(); // This is synchronous means add data to the database
 
 // Insert data into the database

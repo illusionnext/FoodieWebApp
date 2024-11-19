@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.me {background : linear-gradient( tomato 0,#324ab2 25%, #c71585 50%, #b0e0ea)}
 
 *,
 *::before,
@@ -11,7 +12,7 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #171717;
 }
 

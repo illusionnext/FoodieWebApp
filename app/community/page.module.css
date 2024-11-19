@@ -1,60 +1,87 @@
+:root {
+  --text-gradient-stop-1: #ff7e5f;
+  --text-gradient-stop-2: #feb47b;
+  --text-gradient-stop-3: #86a8e7;
+  --gem-sys-color-surface: #fff;
+  --powder-blue1: #b0e0ea;
+  --powder-blue2:rgb(176 224 230);
+  --violet-blue-jinx1: #324ab2;
+  --violet-blue-jinx2: rgb(50 74 158);
+  --red-violet1: #c71585;
+  --red-violet2: rgb(199 21 133);
+}
+
 .header {
-    gap: 3rem;
-    margin: 3rem auto 5rem;
-    width: 90%;
-    max-width: 75rem;
-    color: #ddd6cb;
-    font-size: 1.5rem;
-    text-align: center;
+  gap: 3rem;
+  margin: 3rem auto 5rem;
+  width: 90%;
+  max-width: 75rem;
+  color: #ddd6cb;
+  font-size: 1.5rem;
+  text-align: center;
 
-    & h1 {
-        font-family: Montserrat, sans-serif;
+  & h1 {
+    font-family: Montserrat, sans-serif;
 
-        & .highlight {
-            background: linear-gradient(90deg, #ff6c1a, #efbf04);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    & .highlight {
+      background: linear-gradient(90deg, #ff6c1a, #efbf04);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+  }
 }
 
 .main {
-    width: 90%;
-    max-width: 40rem;
-    margin: 0 auto;
-    text-align: center;
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
 
-    & h2 {
+  & h2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(
+      74deg,
+      var(--text-gradient-stop-1) 0,
+      var(--text-gradient-stop-2) 9%,
+      var(--text-gradient-stop-3) 20%,
+      var(--text-gradient-stop-3) 24%,
+      var(--text-gradient-stop-2) 35%,
+      var(--text-gradient-stop-1) 44%,
+      var(--text-gradient-stop-2) 50%,
+      var(--text-gradient-stop-3) 56%,
+      var(--gem-sys-color-surface) 75%,
+      var(--gem-sys-color-surface) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & .perks {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 0;
+
+    & li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      & img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+      }
+
+      & p {
         font-family: Montserrat, sans-serif;
-        font-size: 2rem;
-        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0;
         color: #ddd6cb;
+      }
     }
-
-    & .perks {
-        list-style: none;
-        margin: 3rem 0;
-        padding: 0;
-
-        & li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-
-            & img {
-                width: 8rem;
-                height: 8rem;
-                object-fit: contain;
-            }
-
-            & p {
-                font-family: Montserrat, sans-serif;
-                font-size: 1.5rem;
-                font-weight: bold;
-                margin: 0;
-                color: #ddd6cb;
-            }
-        }
-    }
+  }
 }

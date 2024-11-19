@@ -2,9 +2,9 @@ import classes from "./page.module.css";
 import Link from "next/link";
 import MealsGrid from "@/components/SSR-ServerSideRendering/meals/meal-grid";
 import { getMeals } from "@/lib/get-meals";
+import { Suspense } from "react";
 
-// SSR function can be async
-export default async function MealsPage() {
+async function MealsData() {
   const meals: {
     id: number;
     title: string;
@@ -14,8 +14,12 @@ export default async function MealsPage() {
     instructions: string;
     creator: string;
     creator_email: string;
-  }[] = getMeals(); //we can fetch it without useEffect because it is SSR, we are on the server
+  }[] = await getMeals(); //we can fetch it without useEffect because it is SSR, we are on the server
+  return <MealsGrid meals={meals} />;
+}
 
+// SSR function can be async
+export default function MealsPage() {
   return (
     <>
       <header className={classes.header}>
@@ -31,7 +35,12 @@ export default async function MealsPage() {
         </p>
       </header>
       <main className={classes.main}>
-        <MealsGrid meals={meals} />
+        {/*Suspense is used to wrap the component that is being fetched, It does the same action as the loading component background.*/}
+        <Suspense
+          fallback={<h1 className={classes.loading}>Meals are loading...</h1>}
+        >
+          <MealsData />
+        </Suspense>
       </main>
     </>
   );

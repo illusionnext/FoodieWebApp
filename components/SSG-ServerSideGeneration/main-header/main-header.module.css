@@ -21,11 +21,11 @@
       width: 5.5rem;
       height: 5.5rem;
       object-fit: contain;
-      filter: drop-shadow(0 0 0.75rem rgba(255, 255, 255, 0.5));
+      filter: drop-shadow(0 0 0.75rem rgb(255 255 255 / 50%));
     }
   }
 
-  & .nav {
+  & nav {
     & ul {
       list-style: none;
       margin: 0;
@@ -38,9 +38,11 @@
     }
   }
 
-  @media (width >= 768px) {
+
+}
+
+@media (width >= 768px) {
     .header {
-      padding: 2rem 10%;
+        padding: 2rem 10%;
     }
-  }
 }

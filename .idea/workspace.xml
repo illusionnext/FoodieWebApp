@@ -5,17 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Foodie.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/stylesheetLinters/stylelint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/meals/loading-out.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-links/nav-link.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/community/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/community/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-link.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-links/nav-link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/slideshow/image-slideshow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/slideshow/image-slideshow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header-background.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header-background.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/initdb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/initdb.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
@@ -25,14 +35,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -49,7 +53,6 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -60,11 +63,15 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\farid\\Downloads\\foodie\\node_modules\\prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.TypeScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\farid\\Downloads\\foodie\\node_modules\\typescript\\lib&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\farid\Downloads\foodie\components\CSR-ClientSideRendering\nav-links" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -83,6 +90,13 @@
       <workItem from="1731825051187" duration="246000" />
       <workItem from="1731825317457" duration="1682000" />
       <workItem from="1731869322425" duration="817000" />
+      <workItem from="1731875588948" duration="3170000" />
+      <workItem from="1731898564349" duration="1013000" />
+      <workItem from="1731902455895" duration="1408000" />
+      <workItem from="1731904407871" duration="4556000" />
+      <workItem from="1731964106174" duration="372000" />
+      <workItem from="1731989041791" duration="17000" />
+      <workItem from="1731989609719" duration="818000" />
     </task>
     <servers />
   </component>
