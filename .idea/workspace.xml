@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/meals/loading-out.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-links/nav-link.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/meals/error.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/community/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/community/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/meals/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/meals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-link.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/nav-links/nav-link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/slideshow/image-slideshow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/slideshow/image-slideshow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header-background.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header-background.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/main-header/main-header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/initdb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initdb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/initdb.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +78,9 @@
       <workItem from="1731904407871" duration="4556000" />
       <workItem from="1731964106174" duration="372000" />
       <workItem from="1731989041791" duration="17000" />
-      <workItem from="1731989609719" duration="818000" />
+      <workItem from="1731989609719" duration="1169000" />
+      <workItem from="1732049709211" duration="208000" />
+      <workItem from="1732051219261" duration="1705000" />
     </task>
     <servers />
   </component>

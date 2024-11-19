@@ -19,6 +19,7 @@ const db = sql("meals.db");
 export async function getMeals(): Promise<Meal[]> {
   await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulate an async operation
   // Fetch all meals and cast the result to the Meal type
+  throw new Error("Fetching meals failed!");
   return db.prepare("SELECT * FROM meals").all() as Meal[]; // Type assertion to Meal[]
 }
 

@@ -2,9 +2,10 @@ import classes from "./page.module.css";
 import Link from "next/link";
 import MealsGrid from "@/components/SSR-ServerSideRendering/meals/meal-grid";
 import { getMeals } from "@/lib/get-meals";
-import { Suspense } from "react";
+import { Suspense } from "react"; //react19
 
 async function MealsData() {
+  //we can fetch it without useEffect because it is SSR, we are on the server side.
   const meals: {
     id: number;
     title: string;
@@ -14,11 +15,12 @@ async function MealsData() {
     instructions: string;
     creator: string;
     creator_email: string;
-  }[] = await getMeals(); //we can fetch it without useEffect because it is SSR, we are on the server
+  }[] = await getMeals();
+
   return <MealsGrid meals={meals} />;
 }
 
-// SSR function can be async
+// SSR function can be async it was export default async function MealsPage()
 export default function MealsPage() {
   return (
     <>
