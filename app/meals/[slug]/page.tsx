@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import Image from "next/image";
 import { getAMeal } from "@/lib/get-meals";
@@ -20,8 +21,10 @@ export default async function MealsSlug({
   console.log({ slug });
   // console.log(params);
 
-  const { title, image, summary, instructions, creator, creator_email }: Meal =
-    await getAMeal(slug);
+  const meal: Meal | null = await getAMeal(slug);
+  if (!meal) notFound();
+
+  const { title, image, summary, instructions, creator, creator_email } = meal;
 
   return (
     <section>

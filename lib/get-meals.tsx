@@ -28,17 +28,14 @@ export async function getMeals(): Promise<Meal[]> {
 // db.prepare("SELECT * FROM meals").run(); //insert data to the database
 // db.prepare("SELECT * FROM meals").get(); //fetch one data from the database
 
-export async function getAMeal(slug: string): Promise<Meal> {
+export async function getAMeal(slug: string): Promise<Meal | null> {
   try {
     const meal = db
       .prepare("SELECT * FROM meals WHERE slug = ?")
       .get(slug) as Meal;
-    if (!meal) {
-      throw new Error(`Meal with slug "${slug}" not found.`);
-    }
-    return meal;
+    return meal || null; // Return null if the meal is not found
   } catch (error) {
     console.error("Error fetching meal:", error);
-    throw error;
+    throw error; // Retain for other errors like database issues
   }
 }
