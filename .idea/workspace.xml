@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/meals/error.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/meals/[slug]/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/not-found.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/meals/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -51,6 +53,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\farid\Downloads\foodie\app" />
       <recent name="C:\Users\farid\Downloads\foodie\components\CSR-ClientSideRendering\nav-links" />
     </key>
   </component>
@@ -80,7 +83,8 @@
       <workItem from="1731989041791" duration="17000" />
       <workItem from="1731989609719" duration="1169000" />
       <workItem from="1732049709211" duration="208000" />
-      <workItem from="1732051219261" duration="1705000" />
+      <workItem from="1732051219261" duration="2666000" />
+      <workItem from="1732056220840" duration="7186000" />
     </task>
     <servers />
   </component>

@@ -13,22 +13,22 @@
 :root {
   --background: #fff;
   --foreground: #171717;
+  --text-gradient-stop-1: #ff7e5f;
+  --text-gradient-stop-2: #feb47b;
+  --text-gradient-stop-3: #86a8e7;
+  --gem-sys-color-surface: #fff;
+  --powder-blue1: #b0e0ea;
+  --powder-blue2: rgb(176 224 230);
+  --violet-blue-jinx1: #324ab2;
+  --violet-blue-jinx2: rgb(50 74 158);
+  --red-violet1: #c71585;
+  --red-violet2: rgb(199 21 133);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --text-gradient-stop-1: #ff7e5f;
-    --text-gradient-stop-2: #feb47b;
-    --text-gradient-stop-3: #86a8e7;
-    --gem-sys-color-surface: #fff;
-    --powder-blue1: #b0e0ea;
-    --powder-blue2: rgb(176 224 230);
-    --violet-blue-jinx1: #324ab2;
-    --violet-blue-jinx2: rgb(50 74 158);
-    --red-violet1: #c71585;
-    --red-violet2: rgb(199 21 133);
   }
 }
 
@@ -66,22 +66,50 @@ body {
 
 .not-found p,
 .error p {
+  text-align: center;
+  animation: loading 1s ease-in-out infinite;
   font-size: 2rem;
   font-weight: 500;
-  color: #ddd8d8;
-  background: linear-gradient(
-    74deg,
-    var(--text-gradient-stop-1) 0,
-    var(--text-gradient-stop-2) 9%,
-    var(--text-gradient-stop-3) 20%,
-    var(--text-gradient-stop-3) 24%,
-    var(--text-gradient-stop-2) 35%,
-    var(--text-gradient-stop-1) 44%,
-    var(--text-gradient-stop-2) 50%,
-    var(--text-gradient-stop-3) 56%,
-    var(--gem-sys-color-surface) 75%,
-    var(--gem-sys-color-surface) 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+@keyframes loading {
+  0% {
+    color: var(--text-gradient-stop-1);
+  }
+
+  9% {
+    color: var(--text-gradient-stop-2);
+  }
+
+  20% {
+    color: var(--text-gradient-stop-3);
+  }
+
+  24% {
+    color: var(--text-gradient-stop-3);
+  }
+
+  35% {
+    color: var(--text-gradient-stop-2);
+  }
+
+  44% {
+    color: var(--text-gradient-stop-1);
+  }
+
+  50% {
+    color: var(--text-gradient-stop-2);
+  }
+
+  56% {
+    color: var(--text-gradient-stop-3);
+  }
+
+  75% {
+    color: var(--gem-sys-color-surface);
+  }
+
+  100% {
+    color: var(--gem-sys-color-surface);
+  }
 }
