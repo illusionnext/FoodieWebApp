@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/meals/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/meals/share/page.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/share/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/share/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "C:\\Users\\farid\\Downloads\\foodie\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\farid\\Downloads\\foodie\\node_modules\\typescript\\lib"
   }
 }]]></component>
@@ -85,7 +86,8 @@
       <workItem from="1732049709211" duration="208000" />
       <workItem from="1732051219261" duration="2666000" />
       <workItem from="1732056220840" duration="7831000" />
-      <workItem from="1732083837937" duration="1534000" />
+      <workItem from="1732083837937" duration="1921000" />
+      <workItem from="1732164952459" duration="6817000" />
     </task>
     <servers />
   </component>
