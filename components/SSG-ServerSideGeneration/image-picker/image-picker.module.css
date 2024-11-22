@@ -33,6 +33,7 @@
   text-align: center;
   color: #a4abb9;
   position: relative;
+  box-shadow: #ededed 0 0 10px;
 }
 
 .preview p {
