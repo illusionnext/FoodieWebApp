@@ -32,6 +32,7 @@ export default function ImagePicker({
     const fileReader = new FileReader(); // Create a new file reader
     fileReader.onload = () => {
       // Set the onload event handler
+
       if (fileReader.result && typeof fileReader.result === "string") {
         setPickedImage(fileReader.result); // Set the picked image to the result of the file reader
       }
