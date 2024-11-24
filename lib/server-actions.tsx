@@ -2,6 +2,7 @@
 
 import { saveMeal } from "@/lib/get-meals";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export async function shareMealReact19(formData: FormData) {
   const mealData = {
@@ -14,7 +15,12 @@ export async function shareMealReact19(formData: FormData) {
     creator: formData.get("name") as string,
     creator_email: formData.get("email") as string,
   };
-  await saveMeal(mealData);
-  console.dir(mealData);
-  // redirect("/meals"); // Redirect to the meals page does not work .NEEDS TO BE FIXED
+
+  console.dir("Saving meal data:", mealData);
+
+  await saveMeal(mealData); // Save the meal data
+  revalidatePath("/meals"); // Revalidate cache
+
+  // Redirect after successful save
+  redirect("/meals"); // Note: Execution stops here
 }

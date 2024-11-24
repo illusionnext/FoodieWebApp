@@ -5,17 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/server-actions.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/submit-button/form-status.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/meals/share/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/share/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/commentsAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/commentsAPI.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initdb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/initdb.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/server-actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server-actions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" afterPath="$PROJECT_DIR$/meals.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +20,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -113,7 +107,8 @@
       <workItem from="1732321023457" duration="4024000" />
       <workItem from="1732335943965" duration="3686000" />
       <workItem from="1732343344373" duration="1345000" />
-      <workItem from="1732344724581" duration="674000" />
+      <workItem from="1732344724581" duration="991000" />
+      <workItem from="1732411519461" duration="3163000" />
     </task>
     <servers />
   </component>

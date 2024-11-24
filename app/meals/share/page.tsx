@@ -1,23 +1,9 @@
 import classes from "./page.module.css";
 import ImagePicker from "@/components/SSG-ServerSideGeneration/image-picker/image-picker";
 import { shareMealReact19 } from "@/lib/server-actions";
+import FormStatus from "@/components/CSR-ClientSideRendering/submit-button/form-status";
 
 export default function ShareMealPage() {
-  // async function shareMealReact19(formData: FormData) {
-  //   "use server";
-  //
-  //   const mealData = {
-  //     title: formData.get("title") as string,
-  //     summary: formData.get("summary") as string,
-  //     instructions: formData.get("instructions") as string,
-  //     image: formData.get("image") as string,
-  //     creator: formData.get("name") as string,
-  //     creator_email: formData.get("email") as string,
-  //   };
-  //
-  //   console.dir(mealData);
-  // }
-
   return (
     <>
       <header className={classes.header}>
@@ -57,7 +43,7 @@ export default function ShareMealPage() {
           </p>
           <ImagePicker label="Your Image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <FormStatus />
           </p>
         </form>
       </main>
