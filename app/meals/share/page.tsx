@@ -17,7 +17,14 @@ export default function ShareMealPage() {
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
-              <input type="text" id="name" name="name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                spellCheck="true"
+                lang="en"
+                required
+              />
             </p>
             <p>
               <label htmlFor="email">Your email</label>
@@ -26,15 +33,31 @@ export default function ShareMealPage() {
           </div>
           <p>
             <label htmlFor="title">Title</label>
-            <input type="text" id="title" name="title" required />
+            <input
+              type="text"
+              id="title"
+              name="title"
+              spellCheck="true"
+              lang="en"
+              required
+            />
           </p>
           <p>
             <label htmlFor="summary">Short Summary</label>
-            <input type="text" id="summary" name="summary" required />
+            <input
+              type="text"
+              id="summary"
+              name="summary"
+              spellCheck="true"
+              lang="en"
+              required
+            />
           </p>
           <p>
             <label htmlFor="instructions">Instructions</label>
             <textarea
+              spellCheck="true"
+              lang="en"
               id="instructions"
               name="instructions"
               rows={10}
