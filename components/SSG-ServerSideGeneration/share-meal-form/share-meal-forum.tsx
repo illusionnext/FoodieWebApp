@@ -1,4 +1,3 @@
-// components/ShareMealForm.tsx
 import classes from "./share-meal-forum.module.css";
 import ImagePicker from "@/components/SSG-ServerSideGeneration/image-picker/image-picker";
 
@@ -91,11 +90,11 @@ export default function ShareMealForm({
             )}
           </p>
           <ImagePicker label="Your Image" name="image" />
+          {message && <span className={classes.error}>{message}</span>}
           <p className={classes.actions}>
             <button type="submit" disabled={isPending}>
               {isPending ? "Sharing..." : "Share Meal"}
             </button>
-            {message && <span className={classes.error}>{message}</span>}
           </p>
         </form>
       </main>

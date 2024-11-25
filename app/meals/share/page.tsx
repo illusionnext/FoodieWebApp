@@ -1,9 +1,8 @@
-// app/meals/share/page.tsx
 "use client";
 
 import { useActionState } from "react";
 import { shareMealReact19 } from "@/lib/server-actions";
-import ShareMealForm from "@/components/CSR-ClientSideRendering/share-meal-form/share-meal-forum";
+import ShareMealForm from "@/components/SSG-ServerSideGeneration/share-meal-form/share-meal-forum";
 
 export default function ShareMealPage() {
   const [state, formAction, isPending] = useActionState(shareMealReact19, {
