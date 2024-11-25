@@ -1,7 +1,7 @@
 "use client";
 import { useFormStatus } from "react-dom";
 
-export default function FormStatus() {
+export default function UseFormStatus() {
   // const status = useFormStatus(); // it is an object with status and pending properties
   const { pending } = useFormStatus(); // we can destructure the pending status from the useFormStatus hook
   console.dir("status", pending);
