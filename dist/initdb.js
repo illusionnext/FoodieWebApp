@@ -166,30 +166,30 @@ const dummyMeals = [
 ];
 // Create the table if it doesn't exist
 db.prepare(`
-  CREATE TABLE IF NOT EXISTS meals (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-     slug TEXT NOT NULL UNIQUE,
-     title TEXT NOT NULL,
-     image TEXT NOT NULL,
-     summary TEXT NOT NULL,
-     instructions TEXT NOT NULL,
-     creator TEXT NOT NULL,
-     creator_email TEXT NOT NULL
-  )
-`).run(); // This is synchronous means add data to the database
+      CREATE TABLE IF NOT EXISTS meals (
+                                         id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                         slug TEXT NOT NULL UNIQUE,
+                                         title TEXT NOT NULL,
+                                         image TEXT NOT NULL,
+                                         summary TEXT NOT NULL,
+                                         instructions TEXT NOT NULL,
+                                         creator TEXT NOT NULL,
+                                         creator_email TEXT NOT NULL
+      )
+    `).run(); // This is synchronous means add data to the database
 // Insert data into the database
 async function initData() {
     const stmt = db.prepare(`
     INSERT INTO meals VALUES (
-       null,
-       @slug,
-       @title,
-       @image,
-       @summary,
-       @instructions,
-       @creator,
-       @creator_email
-     )
+                               null,
+                               @slug,
+                               @title,
+                               @image,
+                               @summary,
+                               @instructions,
+                               @creator,
+                               @creator_email
+                             )
   `);
     try {
         // Insert all dummy meal data
@@ -202,7 +202,6 @@ async function initData() {
         console.error("Error during database initialization:", error);
     }
     finally {
-        // This block will run no matter what (success or failure)
         console.dir("Initialization process completed.");
     }
 }

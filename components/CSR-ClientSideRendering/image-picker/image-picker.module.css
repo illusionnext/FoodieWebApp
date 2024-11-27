@@ -44,3 +44,9 @@
 .preview img {
   object-fit: cover;
 }
+
+.picker .error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}

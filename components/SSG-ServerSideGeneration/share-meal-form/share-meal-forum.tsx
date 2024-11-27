@@ -1,5 +1,5 @@
 import classes from "./share-meal-forum.module.css";
-import ImagePicker from "@/components/SSG-ServerSideGeneration/image-picker/image-picker";
+import ImagePicker from "@/components/CSR-ClientSideRendering/image-picker/image-picker";
 
 interface ShareMealFormProps {
   message: string | null;

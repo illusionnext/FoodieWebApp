@@ -1,4 +1,5 @@
 "use client";
+
 import classes from "./image-picker.module.css";
 import React, { useState, useRef } from "react";
 import Image from "next/image";
@@ -6,13 +7,15 @@ import Image from "next/image";
 export default function ImagePicker({
   label,
   name,
+  maxFileSizeMB = 1,
 }: {
   label: string;
   name: string;
+  maxFileSizeMB?: number; // Maximum file size in MB
 }) {
   const imageInputRef = useRef<HTMLInputElement>(null);
-
   const [pickedImage, setPickedImage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handlePickClick = () => {
     imageInputRef.current?.click();
@@ -23,21 +26,32 @@ export default function ImagePicker({
 
     if (!files || files.length === 0) {
       setPickedImage(null);
+      setErrorMessage("No file selected.");
       return;
     }
 
     const file = files[0];
-    console.log("file:", file);
+    const maxFileSize = maxFileSizeMB * 1024 * 1024; // Convert MB to bytes
 
-    const fileReader = new FileReader(); // Create a new file reader
+    if (file.size > maxFileSize) {
+      setErrorMessage(
+        `File "${file.name}" exceeds the maximum size of ${maxFileSizeMB}MB.`,
+      );
+      return;
+    }
+
+    const fileReader = new FileReader();
     fileReader.onload = () => {
-      // Set the onload event handler
-
       if (fileReader.result && typeof fileReader.result === "string") {
-        setPickedImage(fileReader.result); // Set the picked image to the result of the file reader
+        setPickedImage(fileReader.result);
+        setErrorMessage(null); // Clear error on successful load
       }
     };
-    fileReader.readAsDataURL(file); // Start reading the file. it triggers the onload event handler
+    fileReader.onerror = () => {
+      console.error(`Failed to read file "${file.name}".`);
+      setErrorMessage(`Failed to load "${file.name}". Please try again.`);
+    };
+    fileReader.readAsDataURL(file); // Read the file as a Data URL
   };
 
   return (
@@ -48,7 +62,7 @@ export default function ImagePicker({
           {pickedImage ? (
             <Image
               src={pickedImage}
-              alt="The image selected by the user"
+              alt="Selected image"
               sizes="(max-width: 600px) 100vw, 10rem"
               fill
             />
@@ -65,15 +79,16 @@ export default function ImagePicker({
           ref={imageInputRef}
           onChange={handleImageChange}
           required
-          // multiple
         />
         <button
           type="button"
           className={classes.button}
           onClick={handlePickClick}
+          aria-label={`Pick an image for ${label}`}
         >
           Pick An Image
         </button>
+        {errorMessage && <p className={classes.error}>{errorMessage}</p>}
       </div>
     </div>
   );

@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="" />
+    <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/submit-button/use-form-status.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/submit-button/use-form-status.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/image-picker/image-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/share-meal-form/share-meal-forum.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/share-meal-form/share-meal-forum.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/initdb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/initdb.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/server-actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server-actions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +67,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\farid\Downloads\foodie\components\CSR-ClientSideRendering" />
+      <recent name="C:\Users\farid\Downloads\foodie\components\SSG-ServerSideGeneration" />
       <recent name="C:\Users\farid\Downloads\foodie\app" />
       <recent name="C:\Users\farid\Downloads\foodie\components\CSR-ClientSideRendering\nav-links" />
     </key>
@@ -107,7 +121,10 @@
       <workItem from="1732411519461" duration="3891000" />
       <workItem from="1732451692194" duration="630000" />
       <workItem from="1732512504570" duration="12374000" />
-      <workItem from="1732531020764" duration="3355000" />
+      <workItem from="1732531020764" duration="4025000" />
+      <workItem from="1732543062931" duration="1703000" />
+      <workItem from="1732649502064" duration="5794000" />
+      <workItem from="1732685627881" duration="6786000" />
     </task>
     <servers />
   </component>

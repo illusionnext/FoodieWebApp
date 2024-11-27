@@ -2,6 +2,7 @@
 
 import { saveMeal } from "@/lib/get-meals";
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 interface ShareMealState {
   message: string | null;
@@ -13,18 +14,28 @@ export async function shareMealReact19(
   formData: FormData,
 ): Promise<ShareMealState> {
   const errors: Record<string, string> = {};
+
+  const image = formData.get("image");
+  let processedImage: string | File;
+
+  if (image instanceof File) {
+    processedImage = image; // Keep the image as File if it's a valid File object
+  } else {
+    processedImage = ""; // Default to empty or a placeholder if no image is selected
+  }
+
   const mealData = {
     id: Math.floor(Math.random() * 1000),
     title: formData.get("title") as string,
     slug: formData.get("title") as string,
     summary: formData.get("summary") as string,
     instructions: formData.get("instructions") as string,
-    image: (formData.get("image") as File)?.name || "",
+    image: processedImage, // Use the processed image (File or string)
     creator: formData.get("name") as string,
     creator_email: formData.get("email") as string,
   };
 
-  // Validate inputs
+  // **Validate inputs**
   if (!mealData.creator) errors.name = "Name is required.";
   if (!mealData.creator_email || !mealData.creator_email.includes("@"))
     errors.email = "Valid email is required.";
@@ -33,6 +44,7 @@ export async function shareMealReact19(
   if (!mealData.instructions)
     errors.instructions = "Instructions are required.";
 
+  // **Return errors if validation fails**
   if (Object.keys(errors).length > 0) {
     return {
       message: "Validation failed. Please fix the errors below.",
@@ -40,10 +52,11 @@ export async function shareMealReact19(
     };
   }
 
+  // **No errors: Proceed to save data**
   try {
     await saveMeal(mealData);
+    console.dir('Revalidating "/meals" path... 🦈');
     revalidatePath("/meals");
-    return { message: "Meal shared successfully!", errors: {} };
   } catch (error) {
     console.error("Error sharing meal:", error);
     return {
@@ -51,4 +64,6 @@ export async function shareMealReact19(
       errors: {},
     };
   }
+  console.dir("Redirecting to meals page... 🦈");
+  redirect("/meals");
 }

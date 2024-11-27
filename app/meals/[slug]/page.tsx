@@ -2,24 +2,15 @@ import { notFound } from "next/navigation";
 import classes from "./page.module.css";
 import Image from "next/image";
 import { getAMeal } from "@/lib/get-meals";
-
-interface Meal {
-  title: string;
-  image: string;
-  summary: string;
-  instructions: string;
-  creator: string;
-  creator_email: string;
-}
+import { Meal } from "@/types/types";
 
 export default async function MealsSlug({
   params,
 }: {
-  params: Promise<{ slug: string }>; // Declare `params` as a Promise type
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // Await the `params` Promise before destructuring
+  const { slug } = await params; // Await the Promise before accessing properties
   console.log({ slug });
-  // console.log(params);
 
   const meal: Meal | null = await getAMeal(slug);
   if (!meal) notFound();
