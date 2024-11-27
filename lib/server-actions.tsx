@@ -17,29 +17,31 @@ export async function shareMealReact19(
   const errors: Record<string, string> = {};
 
   const image = formData.get("image");
-  const processedImage = await new Promise<string>((resolve, reject) => {
-    if (image instanceof File) {
-      const fileReader = new FileReader();
-      fileReader.onload = () => {
-        if (fileReader.result && typeof fileReader.result === "string") {
-          resolve(fileReader.result);
-        } else {
-          reject(new Error("Failed to read file"));
-        }
-      };
-      fileReader.onerror = () => reject(new Error("Failed to read file"));
-      fileReader.readAsDataURL(image);
+  let processedImage = "";
+
+  if (image instanceof File) {
+    const formData = new FormData();
+    formData.append("image", image);
+
+    const response = await fetch("/api/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      processedImage = data.image;
     } else {
-      resolve(""); // Default to empty or a placeholder if no image is selected
+      errors.image = "Failed to upload image";
     }
-  });
+  }
 
   const mealData: Omit<Meal, "id"> = {
     title: formData.get("title") as string,
     slug: (formData.get("title") as string).toLowerCase().replace(/\s+/g, "-"),
     summary: formData.get("summary") as string,
     instructions: formData.get("instructions") as string,
-    image: processedImage, // Use the processed image (string)
+    image: processedImage,
     creator: formData.get("name") as string,
     creator_email: formData.get("email") as string,
   };
@@ -65,7 +67,7 @@ export async function shareMealReact19(
   try {
     await saveMeal(mealData);
     console.dir('Revalidating "/meals" path... 🦈');
-    revalidatePath("/meals");
+    revalidatePath("/meals", "page"); // Revalidate the "/meals" path
   } catch (error) {
     console.error("Error sharing meal:", error);
     return {

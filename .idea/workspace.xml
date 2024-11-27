@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/api/upload.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/next.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-grid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSR-ServerSideRendering/meals/meal-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/server-actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server-actions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +124,7 @@
       <workItem from="1732649502064" duration="5794000" />
       <workItem from="1732685627881" duration="7184000" />
       <workItem from="1732710373351" duration="4795000" />
+      <workItem from="1732721710926" duration="4711000" />
     </task>
     <servers />
   </component>

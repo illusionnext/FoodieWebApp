@@ -14,7 +14,9 @@
     "@typescript-eslint/parser": "^8.14.0",
     "better-sqlite3": "^11.5.0",
     "clsx": "^2.1.1",
+    "multer": "^1.4.5-lts.1",
     "next": "^15.0.3",
+    "next-connect": "^1.0.0",
     "prettier": "^3.3.3",
     "react": "^19.0.0-rc-66855b96-20241106",
     "react-dom": "^19.0.0-rc-66855b96-20241106",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.11",
+    "@types/multer": "^1.4.12",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
