@@ -1,6 +1,5 @@
 import classes from "./meal-grid.module.css";
 import MealItem from "@/components/SSR-ServerSideRendering/meals/meal-item";
-// import { StaticImageData } from "next/image";
 
 export default function MealsGrid({
   meals,

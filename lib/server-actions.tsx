@@ -3,6 +3,7 @@
 import { saveMeal } from "@/lib/get-meals";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { Meal } from "@/types/types";
 
 interface ShareMealState {
   message: string | null;
@@ -16,21 +17,29 @@ export async function shareMealReact19(
   const errors: Record<string, string> = {};
 
   const image = formData.get("image");
-  let processedImage: string | File;
+  const processedImage = await new Promise<string>((resolve, reject) => {
+    if (image instanceof File) {
+      const fileReader = new FileReader();
+      fileReader.onload = () => {
+        if (fileReader.result && typeof fileReader.result === "string") {
+          resolve(fileReader.result);
+        } else {
+          reject(new Error("Failed to read file"));
+        }
+      };
+      fileReader.onerror = () => reject(new Error("Failed to read file"));
+      fileReader.readAsDataURL(image);
+    } else {
+      resolve(""); // Default to empty or a placeholder if no image is selected
+    }
+  });
 
-  if (image instanceof File) {
-    processedImage = image; // Keep the image as File if it's a valid File object
-  } else {
-    processedImage = ""; // Default to empty or a placeholder if no image is selected
-  }
-
-  const mealData = {
-    id: Math.floor(Math.random() * 1000),
+  const mealData: Omit<Meal, "id"> = {
     title: formData.get("title") as string,
-    slug: formData.get("title") as string,
+    slug: (formData.get("title") as string).toLowerCase().replace(/\s+/g, "-"),
     summary: formData.get("summary") as string,
     instructions: formData.get("instructions") as string,
-    image: processedImage, // Use the processed image (File or string)
+    image: processedImage, // Use the processed image (string)
     creator: formData.get("name") as string,
     creator_email: formData.get("email") as string,
   };

@@ -43,7 +43,7 @@ export default function ImagePicker({
     const fileReader = new FileReader();
     fileReader.onload = () => {
       if (fileReader.result && typeof fileReader.result === "string") {
-        setPickedImage(fileReader.result);
+        setPickedImage(fileReader.result as string);
         setErrorMessage(null); // Clear error on successful load
       }
     };
@@ -65,6 +65,13 @@ export default function ImagePicker({
               alt="Selected image"
               sizes="(max-width: 600px) 100vw, 10rem"
               fill
+              onError={(e) => console.error((e.target as HTMLImageElement).id)}
+              onLoad={(e) =>
+                console.log((e.target as HTMLImageElement).naturalWidth)
+              }
+              loading="lazy" // {lazy} | {eager}
+              placeholder="blur"
+              priority
             />
           ) : (
             <p>No image picked yet</p>

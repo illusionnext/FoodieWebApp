@@ -16,7 +16,7 @@ export async function getAMeal(slug: string): Promise<Meal | null> {
     const meal = db
       .prepare("SELECT * FROM meals WHERE slug = ?")
       .get(slug) as Meal;
-    return meal || null;
+    return meal || null; // Return null if no meal is found to render a 404 page to run notFound() instead of error()
   } catch (error) {
     console.error("Error fetching meal:", error);
     throw error;

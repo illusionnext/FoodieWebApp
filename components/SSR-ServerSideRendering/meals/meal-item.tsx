@@ -4,7 +4,6 @@ import classes from "./meal-item.module.css";
 import placeholderImage from "@/assets/placeholder.jpg";
 
 export default function MealItem({
-  id = 999,
   title = "Unknown Meal",
   slug = "",
   image,
