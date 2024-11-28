@@ -54,15 +54,15 @@ export async function shareMealReact19(
   // **No errors: Proceed to save data**
   try {
     await saveMeal(mealData);
-    console.dir('Revalidating "/meals" path... 🦈');
+    console.dir('Revalidating "/meals" path... 💥🦈');
     revalidatePath("/meals", "layout");
   } catch (error) {
-    console.error("Error sharing meal:", error);
+    console.error("Error sharing meal: ❌🥊", error);
     return {
       message: "An error occurred while sharing the meal. Please try again.",
       errors: {},
     };
   }
-  console.dir("Redirecting to meals page... 🦈");
+  console.dir("Redirecting to meals page... 💥🦈");
   redirect("/meals");
 }
