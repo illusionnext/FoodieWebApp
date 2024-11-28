@@ -23,6 +23,7 @@ export async function getAMeal(slug: string): Promise<Meal | null> {
   }
 }
 
+// Check if the value is a File object
 function isFile(value: unknown): value is File {
   return typeof File !== "undefined" && value instanceof File;
 }
@@ -41,6 +42,7 @@ export async function saveMeal(
     creator_email: xss(meal.creator_email),
   };
 
+  // Check if the image is a File object
   if (isFile(meal.image)) {
     const extension = meal.image.name.split(".").pop();
     const fileName = `${sanitizedMeal.slug}.${extension}`;

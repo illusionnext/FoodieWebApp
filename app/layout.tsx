@@ -2,8 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import React from "react";
 import MainHeader from "@/components/SSG-ServerSideGeneration/main-header/main-header";
-import { getAMeal } from "@/lib/get-meals";
-import { Meal } from "@/types/types";
+// import { getAMeal } from "@/lib/get-meals"; // This is for dynamic metadata
+// import { Meal } from "@/types/types"; // This is for dynamic metadata
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -47,60 +47,60 @@ export const metadata = {
 };
 
 // This is for dynamic metadata
-export async function genericMetadata({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<{
-  title: string;
-  description: string;
-  keywords: string[];
-  authors: { name: string; url: string }[];
-  creator: string;
-  openGraph: {
-    title: string;
-    description: string;
-    url: string;
-    type: string;
-    images: { url: string; width: number; height: number; alt: string }[];
-  };
-  twitter: {
-    card: string;
-    title: string;
-    description: string;
-    images: string[];
-    creator: string;
-  };
-}> {
-  const { slug } = await params;
-  const meal: Meal | null = await getAMeal(slug);
-  if (!meal) {
-    throw new Error("Meal not found");
-  }
-  const { title, image, summary, creator, creator_email } = meal;
-
-  return {
-    title: title,
-    description: summary,
-    keywords: ["food", "recipes", "delicious", "global cuisine"],
-    authors: [{ name: creator, url: creator_email }],
-    creator: creator,
-    openGraph: {
-      title: title,
-      description: summary,
-      url: "https://foodieswebapp.com",
-      type: "website",
-      images: [{ url: image, width: 800, height: 600, alt: title }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: title,
-      description: summary,
-      images: [image],
-      creator: creator_email,
-    },
-  };
-}
+// export async function genericMetadata({
+//   params,
+// }: {
+//   params: Promise<{ slug: string }>;
+// }): Promise<{
+//   title: string;
+//   description: string;
+//   keywords: string[];
+//   authors: { name: string; url: string }[];
+//   creator: string;
+//   openGraph: {
+//     title: string;
+//     description: string;
+//     url: string;
+//     type: string;
+//     images: { url: string; width: number; height: number; alt: string }[];
+//   };
+//   twitter: {
+//     card: string;
+//     title: string;
+//     description: string;
+//     images: string[];
+//     creator: string;
+//   };
+// }> {
+//   const { slug } = await params;
+//   const meal: Meal | null = await getAMeal(slug);
+//   if (!meal) {
+//     throw new Error("Meal not found");
+//   }
+//   const { title, image, summary, creator, creator_email } = meal;
+//
+//   return {
+//     title: title,
+//     description: summary,
+//     keywords: ["food", "recipes", "delicious", "global cuisine"],
+//     authors: [{ name: creator, url: creator_email }],
+//     creator: creator,
+//     openGraph: {
+//       title: title,
+//       description: summary,
+//       url: "https://foodieswebapp.com",
+//       type: "website",
+//       images: [{ url: image, width: 800, height: 600, alt: title }],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: title,
+//       description: summary,
+//       images: [image],
+//       creator: creator_email,
+//     },
+//   };
+// }
 
 export default function RootLayout({
   children,

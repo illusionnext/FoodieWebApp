@@ -222,11 +222,11 @@ async function initData() {
       stmt.run(meal); // This is synchronous
     }
 
-    console.dir("Database initialized with dummy data.");
+    console.dir("Database initialized with dummy data. 💥🦈");
   } catch (error) {
-    console.error("Error during database initialization:", error);
+    console.error("Error during database initialization: ❌🥊 ", error);
   } finally {
-    console.dir("Initialization process completed.");
+    console.dir("Initialization process completed. 💥🦈");
   }
 }
 

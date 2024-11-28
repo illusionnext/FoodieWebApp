@@ -3,7 +3,6 @@
 import { saveMeal } from "@/lib/get-meals";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { Meal } from "@/types/types";
 
 interface ShareMealState {
   message: string | null;
@@ -17,31 +16,20 @@ export async function shareMealReact19(
   const errors: Record<string, string> = {};
 
   const image = formData.get("image");
-  let processedImage = "";
+  let processedImage: string | File;
 
   if (image instanceof File) {
-    const formData = new FormData();
-    formData.append("image", image);
-
-    const response = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      const data = await response.json();
-      processedImage = data.image;
-    } else {
-      errors.image = "Failed to upload image";
-    }
+    processedImage = image; // Keep the image as File if it's a valid File object
+  } else {
+    processedImage = ""; // Default to empty or a placeholder if no image is selected
   }
 
-  const mealData: Omit<Meal, "id"> = {
+  const mealData = {
     title: formData.get("title") as string,
-    slug: (formData.get("title") as string).toLowerCase().replace(/\s+/g, "-"),
+    slug: formData.get("title") as string,
     summary: formData.get("summary") as string,
     instructions: formData.get("instructions") as string,
-    image: processedImage,
+    image: typeof processedImage === "string" ? processedImage : "", // Ensure image is a string
     creator: formData.get("name") as string,
     creator_email: formData.get("email") as string,
   };
@@ -67,7 +55,7 @@ export async function shareMealReact19(
   try {
     await saveMeal(mealData);
     console.dir('Revalidating "/meals" path... 🦈');
-    revalidatePath("/meals", "page"); // Revalidate the "/meals" path
+    revalidatePath("/meals", "layout");
   } catch (error) {
     console.error("Error sharing meal:", error);
     return {

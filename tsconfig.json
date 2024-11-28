@@ -2,12 +2,10 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "typeRoots": ["./types", "./node_modules/@types"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "outDir": "./dist",
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -15,7 +13,6 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "types": ["@types/node", "@types/react"],
     "plugins": [
       {
         "name": "next"
@@ -28,3 +25,6 @@
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
+
+//"typeRoots": ["./types", "./node_modules/@types"],
