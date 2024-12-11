@@ -18,10 +18,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 2
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2oxxUgazdE6Sylb4ii1Acy2LYwb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -74,7 +73,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.112" />
       </set>
     </attachedChunks>
   </component>
@@ -120,6 +119,8 @@
       <workItem from="1732799617999" duration="4502000" />
       <workItem from="1732966762001" duration="220000" />
       <workItem from="1732985985993" duration="21000" />
+      <workItem from="1733763976769" duration="253000" />
+      <workItem from="1733777660775" duration="168000" />
     </task>
     <servers />
   </component>

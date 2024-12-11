@@ -1,6 +1,6 @@
 {
   "name": "foodie-web-app",
-  "version": "2.0.1 stable-jinxed",
+  "version": "2.1.1 stable-jinxed",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,11 +10,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.17.0",
-    "@typescript-eslint/parser": "^8.17.0",
-    "better-sqlite3": "^11.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "better-sqlite3": "^11.7.0",
     "clsx": "^2.1.1",
-    "next": "^15.0.4",
+    "next": "^15.1.0",
     "next-connect": "^1.0.0",
     "prettier": "^3.4.2",
     "react": "^19.0.0",
@@ -27,13 +27,13 @@
     "@types/multer": "^1.4.12",
     "@types/node": "^22.10.1",
     "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "eslint": "^9.16.0",
-    "eslint-config-next": "^15.0.4",
+    "eslint-config-next": "^15.1.0",
     "postcss": "^8.4.49",
     "stylelint": "^16.11.0",
     "stylelint-config-standard": "^36.0.1",
     "tailwindcss": "^3.4.16",
-    "typescript": "^5"
+    "typescript": "^5.7.2"
   }
 }
