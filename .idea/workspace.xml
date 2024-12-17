@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/commentsAPI.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/commentsAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +22,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2oxxUgazdE6Sylb4ii1Acy2LYwb" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -121,10 +125,19 @@
       <workItem from="1732985985993" duration="21000" />
       <workItem from="1733763976769" duration="253000" />
       <workItem from="1733777660775" duration="168000" />
+      <workItem from="1733936834768" duration="632000" />
+      <workItem from="1734213737392" duration="639000" />
+      <workItem from="1734216248653" duration="25000" />
+      <workItem from="1734267845832" duration="75000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/initdb.js" />
+      </list>
+    </option>
   </component>
 </project>
