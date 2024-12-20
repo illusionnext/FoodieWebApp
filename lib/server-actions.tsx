@@ -9,12 +9,11 @@ interface ShareMealState {
   errors: Record<string, string>;
 }
 
-export async function shareMealReact19(
+export async function shareMeal(
   prevState: ShareMealState | null,
   formData: FormData,
 ): Promise<ShareMealState> {
   const errors: Record<string, string> = {};
-
   const image = formData.get("image");
   let processedImage: string | File;
 
