@@ -35,4 +35,4 @@ export const fallback: { comments: { name: string; meaning: string }[] } = {
 // node dist/initdb.js
 
 // npx tsc --init
-// npx tsc app.ts --outDir ./dist --target ESNext
+// npx tsc initdb.ts --outDir ./dist --target ESNext
