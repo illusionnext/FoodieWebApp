@@ -1,10 +1,11 @@
-/**
- * @type {import('next').NextConfig}
- */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   reactStrictMode: true,
   experimental: {
-    appDir: true,
+    authInterrupts: true,
+    dynamicIO: true,
+    ppr: "incremental",
   },
   images: {
     remotePatterns: [
@@ -15,6 +16,7 @@ const nextConfig = {
       },
     ],
   },
+  bundlePagesRouterDependencies: true,
 };
 
 module.exports = nextConfig;

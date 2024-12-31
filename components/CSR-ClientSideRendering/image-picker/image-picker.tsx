@@ -69,8 +69,8 @@ export default function ImagePicker({
               onLoad={(e) =>
                 console.log((e.target as HTMLImageElement).naturalWidth)
               }
-              loading="lazy" // {lazy} | {eager}
-              placeholder="blur"
+              // loading="lazy"
+              // placeholder="blur"
               priority
             />
           ) : (

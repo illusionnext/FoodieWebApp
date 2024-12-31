@@ -1,13 +1,17 @@
+"use server";
+import "server-only";
+
 import sql from "better-sqlite3";
-import slugify from "slugify";
-import xss from "xss";
-import fs from "node:fs";
+
 import { Meal } from "@/types/types";
+
+// PRFA-65Y3-3VY4-3R48-CK2B-D6V6-KQMC
 
 // Initialize the SQLite database connection
 const db = sql("meals.db");
 
 export async function getMeals(): Promise<Meal[]> {
+  "use cache";
   return db.prepare("SELECT * FROM meals").all() as Meal[];
 }
 
@@ -23,41 +27,12 @@ export async function getAMeal(slug: string): Promise<Meal | null> {
   }
 }
 
-// Check if the value is a File object
-function isFile(value: unknown): value is File {
-  return typeof File !== "undefined" && value instanceof File;
-}
-
 export async function saveMeal(
   meal: Omit<Meal, "id"> & { image: string | File },
 ): Promise<Meal | null> {
-  const sanitizedMeal: Omit<Meal, "id"> = {
-    ...meal,
-    title: xss(meal.title),
-    slug: slugify(meal.title, { lower: true }),
-    image: typeof meal.image === "string" ? xss(meal.image) : "",
-    summary: xss(meal.summary),
-    instructions: xss(meal.instructions),
-    creator: xss(meal.creator),
-    creator_email: xss(meal.creator_email),
-  };
-
-  // Check if the image is a File object
-  if (isFile(meal.image)) {
-    const extension = meal.image.name.split(".").pop();
-    const fileName = `${sanitizedMeal.slug}.${extension}`;
-    const filePath = `public/images/${fileName}`;
-
-    // Save the image to the filesystem
-    const stream = fs.createWriteStream(filePath);
-    const arrayBuffer = await meal.image.arrayBuffer();
-    stream.write(Buffer.from(arrayBuffer));
-    sanitizedMeal.image = `/images/${fileName}`; // Update the image path
-  }
-
   db.prepare(
     "INSERT INTO meals (title, slug, image, summary, instructions, creator, creator_email) VALUES (@title, @slug, @image, @summary, @instructions, @creator, @creator_email)",
-  ).run(sanitizedMeal);
+  ).run(meal);
 
-  return getAMeal(sanitizedMeal.slug); // Return the stored meal
+  return getAMeal(meal.slug); // Return the stored meal
 }

@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d35aa27-55cd-4fb1-9625-3ffd4d02dfb9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/meals/share/page.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/community/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/community/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/meals/share/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/meals/share/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CSR-ClientSideRendering/image-picker/image-picker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/share-meal-form/share-meal-forum.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SSG-ServerSideGeneration/share-meal-form/share-meal-forum.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/initdb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/get-meals.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/get-meals.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/server-actions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/lib/server-actions.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,15 +144,18 @@
       <workItem from="1734715400379" duration="4439000" />
       <workItem from="1734722226923" duration="1003000" />
       <workItem from="1734724478836" duration="620000" />
+      <workItem from="1734880688746" duration="335000" />
+      <workItem from="1735141059606" duration="5412000" />
+      <workItem from="1735154892462" duration="808000" />
+      <workItem from="1735155847390" duration="578000" />
+      <workItem from="1735160765415" duration="97000" />
+      <workItem from="1735175998059" duration="371000" />
+      <workItem from="1735229607262" duration="55000" />
+      <workItem from="1735600560588" duration="8094000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/initdb.js" />
-      </list>
-    </option>
   </component>
 </project>

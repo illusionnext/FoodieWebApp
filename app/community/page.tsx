@@ -1,8 +1,9 @@
+"use cache";
 import Image from "next/image";
 import { perks } from "./data";
 import classes from "./page.module.css";
 
-export default function CommunityPage() {
+export default async function CommunityPage() {
   return (
     <>
       <header className={classes.header}>
