@@ -16,7 +16,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  bundlePagesRouterDependencies: true,
 };
 
 module.exports = nextConfig;
